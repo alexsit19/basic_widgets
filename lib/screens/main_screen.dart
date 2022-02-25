@@ -1,3 +1,4 @@
+import 'package:basic_widgets/screens/container_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:basic_widgets/strings.dart';
 
@@ -10,26 +11,23 @@ class MainScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text(Strings.mainScreenTitle),
         ),
-        body: getBody());
+        body: getBody(context));
   }
 
-  Widget getBody() {
+  Widget getBody(BuildContext context) {
     return ListView(
-      children: const [
+      children: [
         Card(
           child: ListTile(
-            leading: FlutterLogo(),
-              trailing: Icon(Icons.favorite_border_outlined),
-              title: Text(Strings.container,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ))),
-        ),
-        Card(
-          child: ListTile(
-              leading: FlutterLogo(),
-              trailing: Icon(Icons.favorite_border_outlined),
-              title: Text(Strings.boxDecoration,
+              leading: const FlutterLogo(),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ContainerScreen()));
+              },
+              trailing: const Icon(Icons.favorite_border_outlined),
+              title: const Text(Strings.container,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ))),
@@ -39,15 +37,6 @@ class MainScreen extends StatelessWidget {
               leading: FlutterLogo(),
               trailing: Icon(Icons.favorite_border_outlined),
               title: Text(Strings.iconWidget,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ))),
-        ),
-        Card(
-          child: ListTile(
-              leading: FlutterLogo(),
-              trailing: Icon(Icons.favorite_border_outlined),
-              title: Text(Strings.boxDecoration,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ))),
