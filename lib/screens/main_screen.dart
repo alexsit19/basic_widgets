@@ -1,3 +1,4 @@
+import 'package:basic_widgets/screens/column_screen.dart';
 import 'package:basic_widgets/screens/container_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:basic_widgets/strings.dart';
@@ -35,15 +36,12 @@ class MainScreen extends StatelessWidget {
         Card(
           child: ListTile(
               leading: FlutterLogo(),
-              trailing: Icon(Icons.favorite_border_outlined),
-              title: Text(Strings.iconWidget,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ))),
-        ),
-        Card(
-          child: ListTile(
-              leading: FlutterLogo(),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ColumnScreen()));
+              },
               trailing: Icon(Icons.favorite_border_outlined),
               title: Text(Strings.column,
                   style: TextStyle(
