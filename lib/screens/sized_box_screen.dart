@@ -13,9 +13,7 @@ class SizedBoxScreen extends StatelessWidget {
             width: 200,
             height: 50,
             child: ElevatedButton(
-              onPressed: (){
-
-              },
+              onPressed: (){},
               child: const Text("button in SizedBox")
             )
           )
