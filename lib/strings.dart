@@ -11,5 +11,6 @@ class Strings {
   static const String clipRectWidget = "ClipRect Widget";
   static const String align = "Align widget";
   static const String image = "Image widget";
+  static const String stack = "Stack widget";
 
 }

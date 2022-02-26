@@ -1,5 +1,6 @@
 import 'package:basic_widgets/screens/column_screen.dart';
 import 'package:basic_widgets/screens/container_screen.dart';
+import 'package:basic_widgets/screens/row_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:basic_widgets/strings.dart';
 
@@ -35,24 +36,30 @@ class MainScreen extends StatelessWidget {
         ),
         Card(
           child: ListTile(
-              leading: FlutterLogo(),
+              leading: const FlutterLogo(),
               onTap: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ColumnScreen()));
               },
-              trailing: Icon(Icons.favorite_border_outlined),
-              title: Text(Strings.column,
+              trailing: const Icon(Icons.favorite_border_outlined),
+              title: const Text(Strings.column,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ))),
         ),
         Card(
           child: ListTile(
-              leading: FlutterLogo(),
-              trailing: Icon(Icons.favorite_border_outlined),
-              title: Text(Strings.row,
+              leading: const FlutterLogo(),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const RowScreen()));
+              },
+              trailing: const Icon(Icons.favorite_border_outlined),
+              title: const Text(Strings.row,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ))),
@@ -107,6 +114,15 @@ class MainScreen extends StatelessWidget {
               leading: FlutterLogo(),
               trailing: Icon(Icons.favorite_border_outlined),
               title: Text(Strings.image,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ))),
+        ),
+        Card(
+          child: ListTile(
+              leading: FlutterLogo(),
+              trailing: Icon(Icons.favorite_border_outlined),
+              title: Text(Strings.stack,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ))),
