@@ -1,5 +1,6 @@
 import 'package:basic_widgets/screens/column_screen.dart';
 import 'package:basic_widgets/screens/container_screen.dart';
+import 'package:basic_widgets/screens/rich_text_screen.dart';
 import 'package:basic_widgets/screens/row_screen.dart';
 import 'package:basic_widgets/screens/sized_box_screen.dart';
 import 'package:basic_widgets/screens/wrap_screen.dart';
@@ -90,17 +91,23 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(
                         builder: (context) => const WrapScreen()));
               },
-              trailing: Icon(Icons.favorite_border_outlined),
-              title: Text(Strings.wrap,
+              trailing: const Icon(Icons.favorite_border_outlined),
+              title: const Text(Strings.wrap,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ))),
         ),
         Card(
           child: ListTile(
-              leading: FlutterLogo(),
-              trailing: Icon(Icons.favorite_border_outlined),
-              title: Text(Strings.richText,
+              leading: const FlutterLogo(),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const RichTextScreen()));
+              },
+              trailing: const Icon(Icons.favorite_border_outlined),
+              title: const Text(Strings.richText,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ))),
