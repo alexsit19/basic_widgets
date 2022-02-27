@@ -8,9 +8,8 @@ class Strings {
   static const String sizedBox = "SizedBox widget";
   static const String wrap = "Wrap widget";
   static const String richText = "RichText widget";
-  static const String clipRectWidget = "ClipRect Widget";
-  static const String align = "Align widget";
+  static const String clipRRectWidget = "ClipRRect widget";
+  static const String stackAndAlign = "Stack and Align widgets";
   static const String image = "Image widget";
-  static const String stack = "Stack widget";
 
 }

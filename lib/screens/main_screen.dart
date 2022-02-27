@@ -1,3 +1,4 @@
+import 'package:basic_widgets/screens/clip_rrect_widget_screen.dart';
 import 'package:basic_widgets/screens/column_screen.dart';
 import 'package:basic_widgets/screens/container_screen.dart';
 import 'package:basic_widgets/screens/rich_text_screen.dart';
@@ -115,8 +116,14 @@ class MainScreen extends StatelessWidget {
         Card(
           child: ListTile(
               leading: FlutterLogo(),
-              trailing: Icon(Icons.favorite_border_outlined),
-              title: Text(Strings.clipRectWidget,
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ClipRRectScreen()));
+              },
+              trailing: const Icon(Icons.favorite_border_outlined),
+              title: const Text(Strings.clipRRectWidget,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ))),
@@ -125,7 +132,7 @@ class MainScreen extends StatelessWidget {
           child: ListTile(
               leading: FlutterLogo(),
               trailing: Icon(Icons.favorite_border_outlined),
-              title: Text(Strings.align,
+              title: Text(Strings.stackAndAlign,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ))),
@@ -135,15 +142,6 @@ class MainScreen extends StatelessWidget {
               leading: FlutterLogo(),
               trailing: Icon(Icons.favorite_border_outlined),
               title: Text(Strings.image,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ))),
-        ),
-        Card(
-          child: ListTile(
-              leading: FlutterLogo(),
-              trailing: Icon(Icons.favorite_border_outlined),
-              title: Text(Strings.stack,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ))),
