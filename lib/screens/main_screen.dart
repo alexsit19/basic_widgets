@@ -1,9 +1,10 @@
-import 'package:basic_widgets/screens/clip_rrect_widget_screen.dart';
+import 'package:basic_widgets/screens/clip_rrect_screen.dart';
 import 'package:basic_widgets/screens/column_screen.dart';
 import 'package:basic_widgets/screens/container_screen.dart';
 import 'package:basic_widgets/screens/rich_text_screen.dart';
 import 'package:basic_widgets/screens/row_screen.dart';
 import 'package:basic_widgets/screens/sized_box_screen.dart';
+import 'package:basic_widgets/screens/stack_and_align_screen.dart';
 import 'package:basic_widgets/screens/wrap_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:basic_widgets/strings.dart';
@@ -131,8 +132,14 @@ class MainScreen extends StatelessWidget {
         Card(
           child: ListTile(
               leading: FlutterLogo(),
-              trailing: Icon(Icons.favorite_border_outlined),
-              title: Text(Strings.stackAndAlign,
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const StackAndAlignScreen()));
+              },
+              trailing: const Icon(Icons.favorite_border_outlined),
+              title: const Text(Strings.stackAndAlign,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ))),
