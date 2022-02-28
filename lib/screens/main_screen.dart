@@ -18,7 +18,26 @@ class MainScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text(Strings.mainScreenTitle),
         ),
-        body: getBody(context));
+        body: getBody(context),
+        floatingActionButton: FloatingActionButton(
+          child: const Icon(Icons.add),
+          onPressed: () {
+            ScaffoldMessenger.of(context).showSnackBar(getSnackBar());
+          },
+        ),
+    );
+  }
+
+  SnackBar getSnackBar() {
+    return SnackBar(
+      content: const Text("Float action button is pressed"),
+      behavior: SnackBarBehavior.floating,
+      duration: const Duration(milliseconds: 1500),
+      action: SnackBarAction(
+          label: 'Ok',
+          onPressed: () {}
+      ),
+    );
   }
 
   Widget getBody(BuildContext context) {
@@ -140,15 +159,6 @@ class MainScreen extends StatelessWidget {
               },
               trailing: const Icon(Icons.favorite_border_outlined),
               title: const Text(Strings.stackAndAlign,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ))),
-        ),
-        Card(
-          child: ListTile(
-              leading: FlutterLogo(),
-              trailing: Icon(Icons.favorite_border_outlined),
-              title: Text(Strings.image,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ))),
