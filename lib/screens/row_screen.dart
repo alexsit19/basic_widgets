@@ -16,10 +16,10 @@ class RowScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 Container(
-                  margin: const EdgeInsets.only(top: 10, bottom: 5),
-                  padding: const EdgeInsets.all(30.0),
-                  color: Colors.red,
-                  child: const Text("One")),
+                    margin: const EdgeInsets.only(top: 10, bottom: 5),
+                    padding: const EdgeInsets.all(30.0),
+                    color: Colors.red,
+                    child: const Text("One")),
                 Container(
                   margin: const EdgeInsets.only(top: 10, bottom: 5),
                   padding: const EdgeInsets.all(30.0),
@@ -38,10 +38,10 @@ class RowScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Container(
-                    margin: const EdgeInsets.only(top: 5, bottom: 5),
-                    padding: const EdgeInsets.all(30.0),
-                    color: Colors.orange,
-                    child: const Text("Four")),
+                      margin: const EdgeInsets.only(top: 5, bottom: 5),
+                      padding: const EdgeInsets.all(30.0),
+                      color: Colors.orange,
+                      child: const Text("Four")),
                   Container(
                     margin: const EdgeInsets.only(top: 5, bottom: 5),
                     padding: const EdgeInsets.all(30.0),
@@ -59,10 +59,10 @@ class RowScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   Container(
-                    margin: const EdgeInsets.only(top: 5),
-                    padding: const EdgeInsets.all(30.0),
-                    color: Colors.deepPurple,
-                    child: const Text("Seven")),
+                      margin: const EdgeInsets.only(top: 5),
+                      padding: const EdgeInsets.all(30.0),
+                      color: Colors.deepPurple,
+                      child: const Text("Seven")),
                   Container(
                     margin: const EdgeInsets.only(top: 5),
                     padding: const EdgeInsets.all(30.0),

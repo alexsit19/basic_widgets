@@ -15,16 +15,16 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text(Strings.mainScreenTitle),
-        ),
-        body: getBody(context),
-        floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.add),
-          onPressed: () {
-            ScaffoldMessenger.of(context).showSnackBar(getSnackBar());
-          },
-        ),
+      appBar: AppBar(
+        title: const Text(Strings.mainScreenTitle),
+      ),
+      body: getBody(context),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          ScaffoldMessenger.of(context).showSnackBar(getSnackBar());
+        },
+      ),
     );
   }
 
@@ -33,10 +33,7 @@ class MainScreen extends StatelessWidget {
       content: const Text("Float action button is pressed"),
       behavior: SnackBarBehavior.floating,
       duration: const Duration(milliseconds: 1500),
-      action: SnackBarAction(
-          label: 'Ok',
-          onPressed: () {}
-      ),
+      action: SnackBarAction(label: 'Ok', onPressed: () {}),
     );
   }
 
@@ -77,10 +74,8 @@ class MainScreen extends StatelessWidget {
           child: ListTile(
               leading: const FlutterLogo(),
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const RowScreen()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const RowScreen()));
               },
               trailing: const Icon(Icons.favorite_border_outlined),
               title: const Text(Strings.row,

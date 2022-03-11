@@ -10,5 +10,4 @@ class Strings {
   static const String richText = "RichText widget";
   static const String clipRRectWidget = "ClipRRect widget";
   static const String stackAndAlign = "Stack and Align widgets";
-
 }

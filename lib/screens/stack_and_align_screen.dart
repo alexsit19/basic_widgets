@@ -42,14 +42,12 @@ class StackAndAlignScreen extends StatelessWidget {
             ),
             Align(
                 alignment: Alignment.bottomCenter,
-                child: Text("Center Bottom")
-            ),
+                child: Text("Center Bottom")),
             Align(
               alignment: Alignment(0, 0),
               child: Text("Center"),
             )
           ],
-        )
-    );
+        ));
   }
 }
