@@ -16,7 +16,6 @@ class ContainerScreen extends StatelessWidget {
                 color: Colors.green,
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: Colors.red, width: 2)),
-            //color: Colors.green,
             padding: const EdgeInsets.all(16.0),
             child: const Text("Container widget",
                 style: TextStyle(

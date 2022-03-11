@@ -1,3 +1,4 @@
+import 'package:basic_widgets/custom_widgets/floating_snackbar.dart';
 import 'package:basic_widgets/screens/clip_rrect_screen.dart';
 import 'package:basic_widgets/screens/column_screen.dart';
 import 'package:basic_widgets/screens/container_screen.dart';
@@ -22,18 +23,11 @@ class MainScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
-          ScaffoldMessenger.of(context).showSnackBar(getSnackBar());
+          ScaffoldMessenger.of(context).showSnackBar(const FloatingSnackBar(
+            content: Text("Float action button is pressed"),
+          ));
         },
       ),
-    );
-  }
-
-  SnackBar getSnackBar() {
-    return SnackBar(
-      content: const Text("Float action button is pressed"),
-      behavior: SnackBarBehavior.floating,
-      duration: const Duration(milliseconds: 1500),
-      action: SnackBarAction(label: 'Ok', onPressed: () {}),
     );
   }
 
