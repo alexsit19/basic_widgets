@@ -10,6 +10,8 @@ import 'package:basic_widgets/screens/wrap_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:basic_widgets/strings.dart';
 
+import '../custom_widgets/custom_card.dart';
+
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
 
@@ -33,125 +35,17 @@ class MainScreen extends StatelessWidget {
 
   Widget getBody(BuildContext context) {
     return ListView(
-      children: [
-        Card(
-          child: ListTile(
-              leading: const FlutterLogo(),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ContainerScreen()));
-              },
-              trailing: const Icon(Icons.favorite_border_outlined),
-              title: const Text(Strings.container,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ))),
-        ),
-        Card(
-          child: ListTile(
-              leading: const FlutterLogo(),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ColumnScreen()));
-              },
-              trailing: const Icon(Icons.favorite_border_outlined),
-              title: const Text(Strings.column,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ))),
-        ),
-        Card(
-          child: ListTile(
-              leading: const FlutterLogo(),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const RowScreen()));
-              },
-              trailing: const Icon(Icons.favorite_border_outlined),
-              title: const Text(Strings.row,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ))),
-        ),
-        Card(
-          child: ListTile(
-              leading: FlutterLogo(),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const SizedBoxScreen()));
-              },
-              trailing: const Icon(Icons.favorite_border_outlined),
-              title: const Text(Strings.sizedBox,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ))),
-        ),
-        Card(
-          child: ListTile(
-              leading: FlutterLogo(),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const WrapScreen()));
-              },
-              trailing: const Icon(Icons.favorite_border_outlined),
-              title: const Text(Strings.wrap,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ))),
-        ),
-        Card(
-          child: ListTile(
-              leading: const FlutterLogo(),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const RichTextScreen()));
-              },
-              trailing: const Icon(Icons.favorite_border_outlined),
-              title: const Text(Strings.richText,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ))),
-        ),
-        Card(
-          child: ListTile(
-              leading: FlutterLogo(),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ClipRRectScreen()));
-              },
-              trailing: const Icon(Icons.favorite_border_outlined),
-              title: const Text(Strings.clipRRectWidget,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ))),
-        ),
-        Card(
-          child: ListTile(
-              leading: FlutterLogo(),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const StackAndAlignScreen()));
-              },
-              trailing: const Icon(Icons.favorite_border_outlined),
-              title: const Text(Strings.stackAndAlign,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ))),
-        ),
+      children: const [
+        CustomCard(title: Strings.container, destination: ContainerScreen()),
+        CustomCard(title: Strings.column, destination: ColumnScreen()),
+        CustomCard(title: Strings.row, destination: RowScreen()),
+        CustomCard(title: Strings.sizedBox, destination: SizedBoxScreen()),
+        CustomCard(title: Strings.wrap, destination: WrapScreen()),
+        CustomCard(title: Strings.richText, destination: RichTextScreen()),
+        CustomCard(
+            title: Strings.clipRRectWidget, destination: ClipRRectScreen()),
+        CustomCard(
+            title: Strings.stackAndAlign, destination: StackAndAlignScreen())
       ],
     );
   }

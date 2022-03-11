@@ -3,8 +3,10 @@ import 'package:basic_widgets/strings.dart';
 
 class CustomCard extends StatelessWidget {
   final Widget destination;
+  final String title;
 
-  const CustomCard({Key? key, required this.destination}) : super(key: key);
+  const CustomCard({Key? key, required this.title, required this.destination})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +18,8 @@ class CustomCard extends StatelessWidget {
                 context, MaterialPageRoute(builder: (context) => destination));
           },
           trailing: const Icon(Icons.favorite_border_outlined),
-          title: const Text(Strings.column,
-              style: TextStyle(
+          title: Text(title,
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
               ))),
     );
